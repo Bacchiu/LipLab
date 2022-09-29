@@ -1,0 +1,15 @@
+(*val is_even : int -> bool*)
+(*val win : int -> int -> int*)
+
+let is_even x = match (x mod 2) with
+    0-> true
+  |_->false;;
+let check a = (a >= 1 && a <= 5);;
+let win a b = match (a,b) with
+ 
+    (a,b) when check a == true && check b == false -> (1)
+  |(a,b) when check a == false && check b == false -> 0 
+  |(a,b) when check a == false && check b == true -> (-1)
+  |(a,b) when check a == true && check b == true && (is_even(a+b) == true) -> 1
+  |(a,b) when check a == true && check b == true&& (is_even(a+b) == false) -> (-1)
+  |_->0;
