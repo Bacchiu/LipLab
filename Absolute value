@@ -1,1 +1,2 @@
-
+(*val f : int -> int = <fun>*)
+let absolute f = if f < 0 then f * (-1) else f ;;
