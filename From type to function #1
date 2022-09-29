@@ -1,1 +1,5 @@
+(*val f : (int -> int) -> int = <fun>*)
+let absolute f = if f > 0 then f else f*(-1);;
+
+let funtype absolute = if absolute(0) == 0 then 0 else 1;;
 
