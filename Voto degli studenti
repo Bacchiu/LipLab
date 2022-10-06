@@ -1,0 +1,15 @@
+type grade = Val of int | CumLaude;;
+
+let isvalid voto = match voto with
+  | CumLaude -> true
+  | Val voto when (voto > 17 && voto < 31) -> true
+  | -> false ;;
+
+let int_of_grade voto = match voto with
+  | CumLaude -> 32
+  | Val voto when isvalid( Val voto) -> voto
+  |  -> failwith "Valore non valido";;
+
+let avg l = 
+  let somma = List.fold_right (fun a b-> int_of_grade a + b) l 0
+  in (float_of_int somma) /. (List.lenght l);;
