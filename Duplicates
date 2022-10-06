@@ -4,4 +4,4 @@ let rec dup l = match l with
   |a::[]-> false
   |a::(b::[])-> if (a==b) then true else false
   |a::(b::l)->if (a==b) then true else
-      if dup(a::l) == false then dup(b::l) else true;;
+      if dup(a::l) then true else dup(b::l);;
