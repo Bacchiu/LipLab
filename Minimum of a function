@@ -1,0 +1,12 @@
+(*val minfun : (int -> 'a) -> int -> int -> 'a option = <fun>*)
+type 'a option = Some of 'a | None;; 
+
+let rec minfun f a b = 
+  if a < b then None
+  else(
+    let rec minfunRic f a b = 
+      if a = b then f a
+      else min (f a) (minfunRic f (a+1) b)
+    in Some (minfunRic f a b)
+  ) ;;
+
